@@ -1,0 +1,9 @@
+.git
+.github
+__pycache__/
+*.pyc
+*.pyo
+*.dist-info/
+*.egg-info/
+bangumiArchive/
+bangumi_data_processor.log

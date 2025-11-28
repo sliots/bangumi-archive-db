@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    environment:
+      DB_HOST: ${DB_HOST:-localhost}
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-bangumi}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
+      DATA_START_DATE: ${DATA_START_DATE:-}
+    volumes:
+      - ./bangumiArchive:/app/bangumiArchive
+    command: ["python", "main.py"]
+    restart: unless-stopped
